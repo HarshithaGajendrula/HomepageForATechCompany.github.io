@@ -1,0 +1,609 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Happy Shopping
+        </title>
+        <!--Font Awesome icon library-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+
+        /*start of slider*/
+
+
+.body{
+            margin:0;
+            padding:0;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: #23E3C9;    
+        }
+
+        .slider{
+            width:1500px;
+            height:500px;
+            border-radius: 10px;
+            overflow:hidden;
+
+        }
+
+        .slides{
+            width:1500px;
+            height: 500px;
+            display:flex;
+        }
+
+        .slides input{
+            display:none;
+        } 
+
+        .slide img{
+            width: 1500px;
+            height:500px;
+        }
+
+        .navigation-manual{
+          position:absolute;
+          width: 1500px;
+          margin-top: -40px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .manual-btn{
+            border:2px solid #40D3DC;
+            padding:5px;
+            border-radius: 10px;
+            cursor:pointer;
+            transition: 1s;
+        }
+
+        .manual-btn:not(:last-child){
+            margin-right:40px;
+        }
+
+        .manual-btn:hover{
+            background: $40D3C3;
+
+        }
+
+        #radio1:checked ~ .first{
+            margin-left:0;
+        }
+        #radio2:checked ~ .first{
+            margin-left:-200%;
+        }
+        #radio3:checked ~ .first{
+            margin-left:-300%;
+        }
+        #radio4:checked ~ .first{
+            margin-left:-100%;
+        }
+
+        .navigation-auto{
+            position:absolute;
+            display:flex;
+            width: 1500px;
+            justify-content: center;
+            margin-top: 460px;
+        }
+          
+        .navigation-auto div{
+            border: 2px solid #000000;
+            padding:5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .navigation-auto div:not(:last-child){
+             margin-right: 40px;
+        }
+
+        #radio1:checked ~ .navigation-auto .auto-btn1{
+            background: #40D3C3;
+        }
+        #radio2:checked ~ .navigation-auto .auto-btn2{
+            background: #fafafa;
+        }
+        #radio3:checked ~ .navigation-auto .auto-btn3{
+            background: #000000;
+        }
+        #radio4:checked ~ .navigation-auto .auto-btn4{
+            background: #000000;
+        }
+
+
+
+         /*end of slider*/
+
+
+         /*css code for star rating*/
+            .checked{
+        color: orange;
+    }
+        /*end of css code for star rating*/
+            .dropdown{
+                position:relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                display:none;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.9);
+                min-width: 5px;
+                box-shadow: 0px 8px 16px 0px rgba(51, 50, 50, 0.2);
+                padding: 12px 16px;
+            
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+            .zoom:hover{
+                transition:transform 0.6s;
+                transform: scale(1.07);
+            }
+
+            .button {
+                background-color: #4CAF50; /* Green */
+               border: none;
+                color: white;
+                padding: 5px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.1s;
+                }
+
+             .button1 {
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                 }
+             .button2:hover {
+                   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+                  }
+        </style>
+     
+
+    </head>
+    <body bgcolor="#F1F3F6">
+
+        <table border="0" width="100%" bgcolor="#000000">
+         
+        <tr>
+        <td align="right" width="20%"><img src="Untitled.png" width="150" height="50" ></td>
+        <td width="1%"><input type="text" placeholder="Search for Items" style="width: 350px; height: 30px;" ></td>
+        
+        
+        <th width="20%" align="left">
+        <div>
+        <button class="btn" style="background-color: black;"><img src="search.png" width="20" height="30" ></button>
+        </div></th>
+        <th width="5%"><font color="white">Login/Sign up</th>
+        <th width="4%"><font color="white">More</th>
+        <th width="2.5%"><img src="Picture1.png" widtha="10" height="30"></th>
+        </tr>
+        </table>
+
+
+        <table border="0" width="100%" height="5%" bgcolor="#00CC00">  
+            <tr>
+                
+            <th width="14.2%">
+                <a href="#"><font color="black" style="">Top Offers</a> </th>
+               
+
+
+
+             <th width="14.2%">
+                <div class="dropdown">
+                 <span>Electronics</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">TVs</p><hr>
+                     <p>Gaming</p><hr>
+                     <p>Laptops</p><hr> 
+                     <p>Powerbank</p><hr>
+                     <p>Computer Peripherals</p><hr>
+                     <p>Cameras & Accessories</p>
+                  </div>
+                </div>
+
+            </th>
+
+            <th width="14.2%">
+                <div class="dropdown">
+                 <span>Men</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">Tshirts</p><hr>
+                     <p>Shorts</p><hr>
+                     <p>Shirts</p><hr>
+                     <p>Shoes</p><hr>
+                     <p>Kurtas</p><hr>
+                     <p>Suit</p><hr>
+                     <p>Jeans</p>
+                  </div>
+                </div>
+
+            </th>
+            <th width="14.2%">
+                <div class="dropdown">
+                 <span>Women</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">Tshirts</p><hr>
+                     <p>Shorts</p><hr>
+                     <p>Jeans</p><hr>
+                     <p>Nightsuit</p><hr>
+                     <p>Dresses</p><hr>
+                     <p>Kurtas</p>
+                  </div>
+                </div>
+
+            </th>
+            <th width="14.2%">
+                <div class="dropdown">
+                 <span>Kids</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">Shoes</p><hr>
+                     <p>Slippers</p><hr>
+                     <p>Boys & Girls Trackpants</p><hr>
+                     <p>Boys & Girls Shorts</p><hr>
+                     <p>Boys & Girls Jeans</p><hr>
+                     
+                     <p>Boys & Girls Tshirts</p>
+                  </div>
+                </div>
+
+            </th>
+            <th width="14.2%">
+                <div class="dropdown">
+                 <span>Home & Furniture</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">Home Decor</p><hr>
+                     <p>Tools & Utility</p><hr>
+                     <p>Living Room Items</p><hr>
+                     <p>Cleaning & Bath</p><hr>
+                     <p>Pet & Gardening</p><hr>
+                     <p>Lightings & Electronics</p>
+                  </div>
+                </div>
+
+            </th>
+            <th width="14.2%">
+                <div class="dropdown">
+                 <span>Sports</span>
+                  <div class="dropdown-content">
+                     <p><font color="white">Bats</p><hr>
+                     <p>Balls</p><hr>
+                     <p>Equitments</p><hr>
+                     
+                     <p>Nets</p><hr>
+                     <p>Guards</p><hr>
+                     <p>Ball Mallets</p>
+                  </div>
+                </div>
+
+            </th>
+            </tr>
+         </table>
+
+           <br>
+           
+
+
+
+
+
+
+
+            
+
+                         <!--start of slider-->
+
+
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+  
+  
+                <div class="slide first">
+                    <img src="electronics.jpeg"  alt="">
+                </div>
+                <div class="slide ">
+                  <img src="61CCwFSeazL._SX3000_.jpg"  alt="">
+              </div>
+              <div class="slide ">
+                  <img src="61xPJJUCZ0L._SX3000_.jpg"  alt="">
+              </div>
+              <div class="slide ">
+                  <img src="71i723QTb+L._SX3000_.jpg"  alt="">
+              </div>
+              
+  
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+  
+            </div>
+   
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+            </div>
+  
+  
+        </div>
+  
+  
+        <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio'+ counter).checked = true;
+            counter++;
+            if(counter>4){
+                counter = 1;
+            }
+        }, 5000);
+  
+  
+        </script>
+  
+
+                  <!--end of slider-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <br><br>
+        <table border="0" width="100%" BGCOLOR="white" >
+            <tr>
+                <TD colspan="5"><h2>Upgrade your home | Dmart Brands & more</h2><hr></TD>
+            </tr>
+                <th><img src="Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg" width="75%" class="zoom"></th>
+                <th><img src="Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" width="75%" class="zoom"></th>
+                <th><img src="Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" width="75%" class="zoom"></th>
+                <th><img src="D21343116_IN_CEPC_BAU_GW_graphics_March21_dbqc0.5x_8._SY116_CB655805757_.jpg" width="75%" class="zoom"></th>
+                
+                
+                 </tr>
+
+                 <tr>
+                     <th>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star " ></span></th>
+
+
+                <th>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange " ></span></th>
+
+
+
+                <th>
+                        <span class="fa fa-star checked" style="color:orange"></span>
+                        <span class="fa fa-star checked" style="color:orange"></span>
+                        <span class="fa fa-star checked" style="color:orange"></span>
+                        <span class="fa fa-star checked" style="color:orange"></span>
+                        <span class="fa fa-star " ></span></th>
+
+                        <th>
+                            <span class="fa fa-star checked" style="color:orange"></span>
+                            <span class="fa fa-star checked" style="color:orange"></span>
+                            <span class="fa fa-star checked" style="color:orange"></span>
+                            <span class="fa fa-star checked" style="color:orange"></span>
+                            <span class="fa fa-star checked" style="color:orange " ></span></th>
+
+                        <th>
+
+                <tr>
+                    <th><font color="green">Price: 18,999/-</font></th>
+                    <th><font color="green">Price: 33,999/-</font></th>
+                    <th><font color="green">Price: 42,999/-</font></th>
+                    <th><font color="green">Price: 20,999/-</font></th>
+                 
+                </tr>
+ 
+                
+                <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+                <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+                <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+                <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+                
+
+        </table>
+
+        <br>
+        <table border="0" width="100%" BGCOLOR="white" >
+            <tr>
+                <TD colspan="5"><h2>Up to 30% off | Bestselling Furniture & electronics</h2><hr></TD>
+            <tr>
+                <th><img src="51UNdmL9fDL._AC_SY200_.jpg" width="75%" class="zoom"></th>
+                <th><img src="41VDUqScJFL._AC_SY200_.jpg" width="75%" class="zoom"></th>
+                <th><img src="41YjSD1XPoS._AC_SY200_.jpg" width="75%" class="zoom"></th>
+                <th><img src="51FVqpehiEL._AC_SY200_.jpg" width="75%" class="zoom"></th>
+              
+            </tr>
+            
+            <tr>
+                <th>
+           <span class="fa fa-star checked" style="color:orange"></span>
+           <span class="fa fa-star checked" style="color:orange"></span>
+           <span class="fa fa-star checked" style="color:orange"></span>
+           <span class="fa fa-star checked" style="color:orange"></span>
+           <span class="fa fa-star " ></span></th>
+
+           <th>
+            <span class="fa fa-star checked" style="color:orange"></span>
+            <span class="fa fa-star checked" style="color:orange"></span>
+            <span class="fa fa-star checked" style="color:orange"></span>
+            <span class="fa fa-star checked" style="color:orange"></span>
+            <span class="fa fa-star checked" style="color:orange " ></span></th>
+
+            <th>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star checked" style="color:orange"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star " ></span></th>
+
+                <th>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange"></span>
+                    <span class="fa fa-star checked" style="color:orange " ></span></th>
+
+           <tr>
+               <th><font color="green">Price: 599/-</font></th>
+               <th><font color="green">Price: 1099/-</font></th>
+               <th><font color="green">Price: 2500/-</font></th>
+               <th><font color="green">Price: 800/-</font></th>
+    
+           </tr>
+
+           <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+           <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+           <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+           <th><button class="button button2" style="border-radius: 7px;">Show details</button></th>
+         
+
+        </table>
+ 
+        <br>
+        <br>
+   
+
+        <table border="0" width="100%" BGCOLOR="white">
+
+
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+
+            
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+
+            <tr>
+              
+                <th align="center" style="width: 25%;">Get to Know Us</th>
+               
+                <th align="left" style="width:25%;">Connect with Us</th>
+                <th align="left" style="width: 25%;">Make Money with Us</th>
+                <th align="left" style="width: 25%;">Let Us Help You</th>
+               
+            </tr>
+            <tr>
+                <td align="center" >About Us</td>
+                <td>Facebook</td>
+                <td>Sell on Dmart</td>
+                <td>COVID-19 and Dmart</td>
+                
+            </tr>
+            <tr>
+                <td align="center">Careers</td>
+                <td>Twitter</td>
+                <td>Sell under Dmart Accelerator</td>
+                <td>Your Account</td>
+              
+            </tr>
+            <tr>
+                <td align="center">Press Releases</td>
+                <td>Instagram</td>
+                <td>Dmart Global Selling</td>
+                <td>Returns Centre</td>
+           
+            </tr>
+
+            <tr>
+                <td align="center">Dmart Cares</td>
+                <th></th>
+                <td>Become an Affiliate</td>
+                <td>100% Purchase Protection</td>
+                
+             
+            </tr>
+            <tr>
+                <td align="center">Gift a Smile</td>
+                <th></th>
+                <td>Fulfilment by Dmart</td>
+                <td>Dmart App Download</td>
+         
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <td>Advertise Your Products</td>
+                <td>Dmart Assistant Download</td>
+         
+            </tr>
+
+        </table>
+     
+
+
+        <h4 style="text-align: center;color: #555;" >@2021 Dmart | Tech Company pvt ltd</h4>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
